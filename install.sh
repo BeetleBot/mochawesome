@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-#  ☕ MOCHA 101 ELITE INSTALLER v2.0
+#  ☕ Mochawesome ELITE INSTALLER v2.0
 #  Architected for: BatArch / Hyprland
 # ==============================================================================
 
@@ -34,16 +34,11 @@ trap restore_cursor EXIT
 
 print_banner() {
     clear
-    echo -e "${MAUVE}${BOLD}"
-    echo "  ███╗   ███╗ ██████╗  ██████╗██╗  ██╗ █████╗     ██╗ █████╗ ██╗"
-    echo "  ████╗ ████║██╔═══██╗██╔════╝██║  ██║██╔══██╗   ███║██╔══██╗██║"
-    echo "  ██╔████╔██║██║   ██║██║     ███████║███████║   ╚██║██║  ██║██║"
-    echo "  ██║╚██╔╝██║██║   ██║██║     ██╔══██║██╔══██║    ██║██║  ██║██║"
-    echo "  ██║ ╚═╝ ██║╚██████╔╝╚██████╗██║  ██║██║  ██║    ██║╚█████╔╝██║"
-    echo "  ╚═╝     ╚═╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝ ╚════╝ ╚═╝"
-    echo -e "${RESET}"
     echo -e "${GRAY}  ────────────────────────────────────────────────────────────${RESET}"
-    echo -e "  ${FLAMINGO}PREMIUM HYPRLAND DOTFILES${RESET} | ${GRAY}SYSTEM DEPLOYMENT ENGINE v2.0${RESET}"
+    echo -e "  ${FLAMINGO}MOCHAWESOME v0.1${RESET} | ${GRAY}Assembled for Laptops with under 15 inch screens${RESET}"
+    echo -e "${GRAY}  ────────────────────────────────────────────────────────────${RESET}\n"
+    echo -e "${GRAY}  ────────────────────────────────────────────────────────────${RESET}"
+    echo -e "  ${FLAMINGO}HYPRLAND DOTFILES${RESET} | ${GRAY}SYSTEM DEPLOYMENT ENGINE v2.0${RESET}"
     echo -e "${GRAY}  ────────────────────────────────────────────────────────────${RESET}\n"
 }
 
@@ -117,7 +112,7 @@ for folder in "${TARGET_FOLDERS[@]}"; do
 done
 
 # --- 4. DEPLOYMENT ---
-step_header "PHASE 04: MOCHA 101 CORE DEPLOYMENT"
+step_header "PHASE 04: Mochawesome CORE DEPLOYMENT"
 
 for folder in "${TARGET_FOLDERS[@]}"; do
     if [ -d "$SCRIPT_DIR/$folder" ]; then
