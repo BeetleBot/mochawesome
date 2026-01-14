@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================================================
-#  ☕ Mochawesome ELITE INSTALLER v2.0
+#  ☕ MOCHA 101 ELITE INSTALLER v2.0
 #  Architected for: BatArch / Hyprland
 # ==============================================================================
 
@@ -34,11 +34,16 @@ trap restore_cursor EXIT
 
 print_banner() {
     clear
+    echo -e "${MAUVE}${BOLD}"
+    echo "  ███╗   ███╗ ██████╗  ██████╗██╗  ██╗ █████╗     ██╗ █████╗ ██╗"
+    echo "  ████╗ ████║██╔═══██╗██╔════╝██║  ██║██╔══██╗   ███║██╔══██╗██║"
+    echo "  ██╔████╔██║██║   ██║██║     ███████║███████║   ╚██║██║  ██║██║"
+    echo "  ██║╚██╔╝██║██║   ██║██║     ██╔══██║██╔══██║    ██║██║  ██║██║"
+    echo "  ██║ ╚═╝ ██║╚██████╔╝╚██████╗██║  ██║██║  ██║    ██║╚█████╔╝██║"
+    echo "  ╚═╝     ╚═╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝ ╚════╝ ╚═╝"
+    echo -e "${RESET}"
     echo -e "${GRAY}  ────────────────────────────────────────────────────────────${RESET}"
-    echo -e "  ${FLAMINGO}MOCHAWESOME v0.1${RESET} | ${GRAY}Assembled for Laptops with under 15 inch screens${RESET}"
-    echo -e "${GRAY}  ────────────────────────────────────────────────────────────${RESET}\n"
-    echo -e "${GRAY}  ────────────────────────────────────────────────────────────${RESET}"
-    echo -e "  ${FLAMINGO}HYPRLAND DOTFILES${RESET} | ${GRAY}SYSTEM DEPLOYMENT ENGINE v2.0${RESET}"
+    echo -e "  ${FLAMINGO}PREMIUM HYPRLAND DOTFILES${RESET} | ${GRAY}SYSTEM DEPLOYMENT ENGINE v2.0${RESET}"
     echo -e "${GRAY}  ────────────────────────────────────────────────────────────${RESET}\n"
 }
 
@@ -85,7 +90,7 @@ sudo -v
 echo -e "\r  ${ICON_OK} Sudo Session Active              "
 
 # Official Repo Packages
-PACKAGES_CORE="hyprland waybar swaync hypridle hyprlock hyprpolkitagent xdg-desktop-portal-hyprland xdg-desktop-portal-gnome kitty fish thunar pavucontrol hyprshot grim slurp jq wl-clipboard brightnessctl playerctl curl unzip"
+PACKAGES_CORE="hyprland waybar rofi swaync hypridle hyprlock hyprpolkitagent xdg-desktop-portal-hyprland xdg-desktop-portal-gnome kitty fish thunar pavucontrol hyprshot grim slurp jq wl-clipboard brightnessctl playerctl curl unzip"
 for pkg in $PACKAGES_CORE; do
     run_task "Deploying $pkg" "sudo pacman -S --needed $pkg --noconfirm"
 done
@@ -97,12 +102,11 @@ fi
 
 run_task "Deploying rmpc" "yay -S --needed rmpc --noconfirm"
 run_task "Deploying awww-git" "yay -S --needed awww-git --noconfirm"
-run_task "Deploying vicinae-bin" "yay -S --needed vicinae-bin --noconfirm"
 
 # --- 3. DATA PERSISTENCE & BACKUP ---
 step_header "PHASE 03: CONFIGURATION SHADOWING (BACKUP)"
 BACKUP_DIR="$HOME/ConfigBackups/$(date +%Y%m%d_%H%M%S)"
-TARGET_FOLDERS=("hypr" "kitty" "mpd" "rmpc" "swaync" "vicinae" "waybar" "fish")
+TARGET_FOLDERS=("hypr" "kitty" "rofi" "mpd" "rmpc" "swaync" "waybar" "fish")
 
 mkdir -p "$BACKUP_DIR"
 for folder in "${TARGET_FOLDERS[@]}"; do
@@ -112,7 +116,7 @@ for folder in "${TARGET_FOLDERS[@]}"; do
 done
 
 # --- 4. DEPLOYMENT ---
-step_header "PHASE 04: Mochawesome CORE DEPLOYMENT"
+step_header "PHASE 04: MOCHA 101 CORE DEPLOYMENT"
 
 for folder in "${TARGET_FOLDERS[@]}"; do
     if [ -d "$SCRIPT_DIR/$folder" ]; then
