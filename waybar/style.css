@@ -1,16 +1,16 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    /*font-family: 'JetBrainsMono Nerd Font Propo', sans-serif;*/
     font-family: 'iMWritingMono Nerd Font Propo', sans-serif;
-    font-size: 12px;
+    /*font-family: 'JetBrainsMono Nerd Font Propo', sans-serif;*/
+    font-size: 14px;
     font-weight: bold;
-    border-radius: 0px;
 }
 
 @import "../waybar/colors/mocha.css";
 
 window#waybar {
-    background-color: alpha(@base,0.9);
+    /*background-color: alpha(@background,0.9);*/
+    background-color: transparent;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -31,14 +31,15 @@ button {
 
 
 #workspaces {
-    /*border: 2px @lavender solid;*/
-    /*background: @base;*/
+    background: @base;
     color: @mauve;
     font-weight: normal;
     font-style: normal;
+    background: @base;
+    border-radius: 10px;
 }
 #workspaces button {
-    border-radius: 0px;
+    border-radius: 10px;
     /*background: @base;*/
     min-width: 20px;
     color: @mauve;
@@ -47,7 +48,7 @@ button {
 #workspaces button.active {
     background: @mauve;
     color: @base;
-    border-radius: 0px;
+    border-radius: 10px;
     min-width: 30px;
     background-size: 400% 400%;
     transition: all 0.1s ease-in-out;
@@ -58,7 +59,7 @@ button {
 #workspaces button:hover {
     background: @mauve;
     color: @base;
-    border-radius: 0px;
+    border-radius: 10px;
     min-width: 30px;
 }
 
@@ -81,7 +82,6 @@ button {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
-#mpris,
 #mpd {
     padding: 0 10px;
     color: #ffffff;
@@ -113,28 +113,33 @@ button {
 }
 */
 
-#mpris {
-    border-radius: 0px;
+#mpd {
+    background: @base;
+    border-radius: 10px;
     /*border: 2px @lavender solid;*/
     /*background-color: @base;*/
     color:@green;  
 }
 
-#mpris:hover {
+#mpd:hover {
     background-color: @green;
     color: @base;
 }
 
 #custom-logo {
-    border-radius: 0px;
+    background: @base;
+    border-radius: 10px;
+    min-width: 40px;
     /*border: 2px @lavender solid;*/
-    /*margin-right: 3px;*/
+    margin-right: 5px;
     /*background-color: @base;*/
     color:@sky;  
 }
 
 #custom-logo:hover {
+    min-width: 40px;
     background-color: @sky;
+    border-radius: 10px;
     color: @base;
 }
 
@@ -154,8 +159,10 @@ button {
 }
 
 #bluetooth{
-    border-radius: 0px;
+    background: @base;
+    border-radius: 10px;
     font-size: 15;
+    min-width: 20px;
     /*border: 2px @lavender solid;*/
     /*background-color: @base;*/
     color:@flamingo;
@@ -164,11 +171,14 @@ button {
 #bluetooth:hover {
     background-color: @flamingo;
     font-size: 15;
+    border-radius: 10px;
     color: @base;
 }
 
 #clock {
-    border-radius: 0px;
+    margin-left: 5px;
+    background: @base;
+    border-radius: 10px;
     /*margin-left: 3px;*/
     /*border: 2px @lavender solid;*/
     /*background-color: @base;*/
@@ -176,6 +186,7 @@ button {
 }
 
 #clock:hover {
+    border-radius: 10px;
     background-color: @maroon;
     color: @base;
 }
@@ -197,7 +208,8 @@ button {
 */
 
 #network {
-    border-radius: 0px;
+    background: @base;
+    border-radius: 10px;
     /*border: 2px @lavender solid;
     background-color: @base;*/
     color:@lavender;
@@ -205,30 +217,33 @@ button {
 }
 
 #network:hover {
+    border-radius: 10px;
     background-color: @lavender;
     color: @base;
 }
 
 #network.disconnected {
-    border-radius: 0px;
+    border-radius: 10px;
     background-color: @red;
     color: @crust;
 }
 
 #pulseaudio {
-    border-radius: 0px;
+    background: @base;
+    border-radius: 10px;
     /*border: 2px @lavender solid;*/
     /*background-color: @base;*/
     color: @sapphire;
 }
 
 #pulseaudio.muted {
-    border-radius: 0px;
+    border-radius: 10px;
     background-color: @red;
     color: @crust;
 }
 
 #pulseaudio:hover {
+    border-radius: 10px;
     background-color: @sapphire;
     color: @base;
 }
@@ -237,8 +252,16 @@ button {
 /*MODULES THAT ARE NOT IN USE*/
 
 #battery {
+    background: @base;
+    border-radius: 10px;
     /*background-color: @base;*/
     color: @rosewater;
+}
+
+#battery:hover {
+    border-radius: 10px;
+    background-color: @rosewater;
+    color: @base;
 }
 
 #battery.charging, #battery.plugged {
@@ -258,6 +281,7 @@ button {
 #battery.critical:not(.charging) {
     /*background-color: @red;*/
     color: @red;
+    border-radius: 10px;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -265,21 +289,16 @@ button {
     animation-direction: alternate;
 }
 
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
+#backlight {
+    background: @base;
+    border-radius: 10px;
+    color: @teal;
 }
 
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
+#backlight:hover {
+    border-radius: 10px;
+    background-color: @teal;
+    color: @base;
 }
 
 #language {
@@ -409,9 +428,5 @@ label:focus {
 
 #disk {
     background-color: #964B00;
-}
-
-#backlight {
-    background-color: #90b1b1;
 }
 

@@ -79,7 +79,6 @@ trough slider:hover {
   padding: 4px;
   color: @crust;
   background-color: @red;
-  border-radius: 8px;
 }
 
 .notification-background .close-button:hover {
@@ -87,7 +86,6 @@ trough slider:hover {
 }
 
 .notification .notification-action {
-  border-radius: 8px;
   color: @text;
   background-color: @surface0;
   border: 1px solid @surface1;
@@ -103,7 +101,6 @@ trough slider:hover {
 .control-center {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   border: 2px solid @surface0;
-  border-radius: 12px;
   background-color: alpha(@base, 0.7); 
   color: @text;
   padding: 14px;
@@ -143,7 +140,6 @@ trough slider:hover {
 
 .widget-dnd > switch {
   background: @surface0;
-  border-radius: 12px;
 }
 
 .widget-dnd > switch:checked {
@@ -153,7 +149,6 @@ trough slider:hover {
 .widget-mpris-player {
   background: @mantle;
   border: 1px solid @surface0;
-  border-radius: 12px;
   padding: 10px;
   margin: 10px 0;
 }
