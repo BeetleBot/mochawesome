@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 MOUNTPOINT="/home/nkr/drive"
 REMOTE="work:"

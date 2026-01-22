@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Define paths
-RICE_DIR="/home/nkr/Documents/Rices/Mocha101"
+RICE_DIR="/home/nkr/Documents/Repos/BrewLand/"
 CONFIG_DIR="/home/nkr/.config/"
 
 # Array of folder names to sync
-FOLDERS=("hypr" "kitty" "rofi" "swaync" "waybar")
+FOLDERS=("hypr" "rofi" "kitty" "swaync" "waybar" "brewland")
 
 echo "Starting config sync to Mocha101 rice..."
 
