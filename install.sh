@@ -78,7 +78,7 @@ DOTFILES=(
     "rofi" 
     "swaync" 
     "waybar"
-    "mochawesome"
+    "brewland"
 )
 
 # ------------------------------------------------------
@@ -119,7 +119,25 @@ act() {
 # START
 # ------------------------------------------------------
 
-echo -e "${B_MAG}MOCHAWESOME v2.0${RST}"
+echo -e "${B_MAG}"
+echo "       {"
+echo "       }   }   {"
+echo "      {   {  }  }"
+echo "       }   }{  {"
+echo "      {  }{  }  }"
+echo "     ( }{ }{  { )"
+echo "    .-{   }   }-."
+echo "   ( ( } { } { ) )"
+echo "   |-.._____..-''|    BREWLAND 2.0 "
+echo "   |             |    With Small Screens in Mind"
+echo "   |    mocha    |    Happy Brewing!"
+echo "   |   awesome   |"
+echo "   |             |"
+echo "   \             /"
+echo "    \___________/"
+echo -e "${RST}"
+echo -e "  ${B_WHT}:: mochawesome INSTALLER ::${RST}"
+echo -e "  ${BLK}:: System Deployment ::${RST}"
 echo ""
 
 # ask user start
