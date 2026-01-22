@@ -63,6 +63,16 @@ button {
     min-width: 30px;
 }
 
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 5px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
 /* WORKSPACES END*/
 
 #clock,
@@ -148,16 +158,6 @@ button {
     margin: 0 0px;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0px;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-
 #bluetooth{
     background: @base;
     border-radius: 10px;
@@ -176,7 +176,7 @@ button {
 }
 
 #clock {
-    margin-left: 5px;
+    /*margin-left: 5px;*/
     background: @base;
     border-radius: 10px;
     /*margin-left: 3px;*/

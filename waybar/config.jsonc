@@ -7,11 +7,11 @@
     "margin-top": 5,
 
     "modules-left": [
-        "clock",
+        "hyprland/workspaces",
         "mpd" // Changed from mpris to mpd
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "clock"
     ],
     "modules-right": [
         "pulseaudio",
@@ -42,7 +42,7 @@
     },
 
     "custom/logo": {
-        "format": "  ",
+        "format": "  ",
         "tooltip": false,
         "return-type": "json",
         "exec-if": "which swaync-client",
@@ -66,7 +66,7 @@
             "7": "7",
             "8": "8",
             "9": "9",
-            "10": "10"
+            "10": "0"
         },
         "persistent-workspaces": {
             "1": [],
@@ -78,7 +78,7 @@
     },
     
     "bluetooth": {
-        "format-on": "󰂯",
+        "format-on": "",
         "format-off": "󰂲",
         "format-disabled": "", 
         "format-connected": "󰂱 {num_connections}",
@@ -128,15 +128,14 @@
     },
 
     "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon}",
-        "format-full": "{icon}",
-        "format-charging": "󰂄",
-        "format-plugged": "",
-        "format-alt": "{capacity}%",
-        "format-icons": ["", "", "", "", ""]
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": " {capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "interval": 60
     }
+
 }
