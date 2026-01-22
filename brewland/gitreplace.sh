@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define paths
-RICE_DIR="/home/nkr/Documents/Repos/BrewLand/"
+RICE_DIR="/home/nkr/mochawesome/"
 CONFIG_DIR="/home/nkr/.config/"
 
 # Array of folder names to sync
